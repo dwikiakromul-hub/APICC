@@ -102,10 +102,8 @@ if ($method == 'GET') {
                                 'kategori' => $row["subcategory_casename"],
                                 'Kecamatan' => $row["kecamatan_name"],
                                
-                                'Tanggal' => $z=DateTime::createFromFormat("l dS F Y", $row ["trans_createdate"]),
-                                'Tanggal' => $cutoff = array_diff($z, $d),
-                                'Tanggal' => $arrcut = array_keys($cutoff),
-                                'Tanggal' => implode("", $arrcut),
+                                'Tanggal' => $row ["trans_createdate"],
+                               
 
                                 'Status' => $row["trans_victimstat"]
                                 ];
