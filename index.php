@@ -214,7 +214,7 @@ if ($method == 'GET') {
                     JOIN DS_CaseType ON DsCase_category.category_casetypeid = DS_CaseType.type_caseid
                     JOIN Ds_kecamatan ON Ds_transaction.kecamatan_id = Ds_kecamatan.kecamatan_id
                     JOIN Ds_city ON Ds_kecamatan.city_id = Ds_city.city_id
-                    where Ds_transaction.trans_createdate >= DATEADD(HOUR, -50, GETDATE())
+                    where Ds_transaction.trans_createdate >= DATEADD(HOUR, -3, GETDATE())
                     order by trans_createdate desc";
 
                     $result = sqlsrv_query( $conn, $sql);
