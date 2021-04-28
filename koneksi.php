@@ -9,14 +9,13 @@
                              "CharacterSet"=>"UTF-8");
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
-    $user="BPBDCC";
-    $pass="salamTangguh!!";
+
 
     function getToken() {
         $header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
     
     // Create token payload as a JSON string
-        $payload = json_encode(['username' => $user, 'password' => $pass]);
+        $payload = json_encode(['username' => 'BPBDCC', 'password' => 'salamTangguh!!']);
     
     // Encode Header to Base64Url String
         $base64UrlHeader = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($header));

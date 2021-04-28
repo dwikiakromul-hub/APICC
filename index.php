@@ -29,7 +29,7 @@ if ($method == 'GET') {
             $konten = trim(file_get_contents("php://input"));
             $decode = json_decode($konten, true);
             $response = array();
-            if ($decode['username'] == $user && $decode['password'] == $pass) {
+            if ($decode['username'] == 'BPBDCC' && $decode['password'] == 'salamTangguh!!') {
                 $response = array(
                     'response' => array(
                         'token' => getToken()
